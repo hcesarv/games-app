@@ -1,7 +1,9 @@
-<div class="search-container">
-  <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <span class="logo" routerLink="/">Games App</span>
-    <input type="text" class="search-input" name="search" placeholder="Search Games" ngModel>
-    <button class="search-button">Search</button>
-  </form>
-</div>
+<header class="search-container">
+  <span class="logo" routerLink="/">Games Library</span>
+  <div class="wrapper">
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <input type="text" class="search-input" name="search" placeholder="Search Games" [(ngModel)]="search">
+      <button class="search-button">Search</button>
+    </form>
+  </div>
+</header>
