@@ -20,7 +20,7 @@
 
 <section class="games-section">
   <ng-container *ngFor="let game of games">
-    <article class="game">
+    <article class="game" (click)="openGameDetails(game.id)">
       <div class="game-thumb-container">
         <img *ngIf="game.background_image" src="{{game.background_image}}" alt="game-thumbnail" class="game-thumbnail">
         <p *ngIf="!game.background_image">No image to display</p>
