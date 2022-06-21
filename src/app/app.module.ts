@@ -28,7 +28,7 @@ import { DetailsComponent } from './components/details/details.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    GaugeModule,
+    GaugeModule.forRoot(),
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
