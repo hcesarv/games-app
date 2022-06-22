@@ -29,7 +29,7 @@ export class HttpService {
         return {
           ...res['gameInfoRequest'],
           screenshots: res['gameScreenshotsRequest']?.results,
-          trailers: res['gameTrailersRequest']?.results
+          trailers: res['gameTrailerRequest']?.results
         };
       })
     );

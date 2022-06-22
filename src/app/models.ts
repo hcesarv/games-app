@@ -48,4 +48,5 @@ interface Trailer {
   data: {
     max: string;
   };
+  preview: string
 }
