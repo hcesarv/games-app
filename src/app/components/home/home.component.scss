@@ -60,18 +60,17 @@ mat-form-field {
 }
 
 .game {
-  width: 280px;
+  width: 17rem;
   margin: 10px;
-  height: 330px;
+  height: 18rem;
   overflow: hidden;
   border-radius: 5px;
   background-color: #202020;
   box-shadow: 4px 3px 8px 0px rgba(200, 44, 166, 0.22);
   transition-duration: 0.5s;
-  cursor: pointer;
 
   &:hover {
-    box-shadow: 4px 3px 6px 6px #E53F71;
+    box-shadow: 0px 1px 3px 3px #E53F71;
     transform: translateY(-3px);
   }
 
@@ -96,7 +95,6 @@ mat-form-field {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     height: 157px;
   }
 
@@ -105,9 +103,10 @@ mat-form-field {
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
-    white-space: nowrap;
+    // white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    cursor: pointer;
   }
 
   &-platforms {
