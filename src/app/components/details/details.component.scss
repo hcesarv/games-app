@@ -48,7 +48,7 @@
 
     &-img {
       width: 100%;
-      filter: blur(1px);
+      filter: blur(3px);
     }
   }
 
@@ -69,12 +69,12 @@
     }
 
     &-release-date {
-      color: #fff;
+      color: #E53F71;
       font-weight: 700;
     }
 
     &-genres {
-      color: #fff;
+      color: #E53F71;
       font-weight: 700;
     }
   }
