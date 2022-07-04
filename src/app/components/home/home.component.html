@@ -1,6 +1,5 @@
 <div class="wrapper">
-    <h1 class="title">Main Games</h1>
-
+  <h1 class="title">Main Games</h1>
   <div class="filters">
     <mat-form-field>
       <mat-label>Sort by:</mat-label>
@@ -15,18 +14,17 @@
       </mat-select>
     </mat-form-field>
   </div>
-
 </div>
 
 <section class="games-section">
   <ng-container *ngFor="let game of games">
-    <article class="game" >
+    <article class="game" (click)="openGameDetails(game.id)">
       <div class="game-thumb-container">
         <img *ngIf="game.background_image" src="{{game.background_image}}" alt="game-thumbnail" class="game-thumbnail">
         <p *ngIf="!game.background_image">No image to display</p>
       </div>
       <div class="game-description">
-        <p class="game-name" (click)="openGameDetails(game.id)">{{game.name}}</p>
+        <p class="game-name">{{game.name}}</p>
         <div class="game-platforms">
           <img *ngFor="let gamePlatform of game.parent_platforms" class="game-platform"
             src="assets/images/platforms/{{gamePlatform.platform.slug}}.svg" alt="{{gamePlatform.platform.slug}}">

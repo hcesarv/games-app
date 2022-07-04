@@ -5,6 +5,8 @@
 }
 
 .details {
+  height: 100vh;
+
   ::ng-deep mwl-gauge {
     width: 150px;
     height: 150px;
@@ -43,7 +45,7 @@
 
 .game {
   &-banner {
-    height: 442px;
+    height: 500px;
     overflow: hidden;
 
     &-img {
@@ -60,22 +62,46 @@
 
   &-header {
     &-title {
-      font-size: 70px;
-      // color: #fff;
-      color: #E53F71;
+      font-size: 4.5rem;
+      color: #fff;
       font-weight: 700;
       line-height: 70px;
       white-space: nowrap;
     }
 
     &-release-date {
-      color: #E53F71;
+      color: #fff;
       font-weight: 700;
     }
 
     &-genres {
-      color: #E53F71;
+      color: #fff;
       font-weight: 700;
     }
   }
+}
+
+@media only screen and (max-width: 599px) {
+  .game-header-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .game-banner {
+    height: 14rem;
+  }
+
+  .game-gauge {
+    top: 9% !important;
+
+    &-label {
+      bottom: 2em !important;
+    }
+  }
+
+  ::ng-deep mwl-gauge {
+    height: 100px !important;
+    width: 100px !important;
+  }
+
 }

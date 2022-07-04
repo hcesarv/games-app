@@ -66,12 +66,12 @@ mat-form-field {
   overflow: hidden;
   border-radius: 5px;
   background-color: #202020;
-  box-shadow: 4px 3px 8px 0px rgba(200, 44, 166, 0.22);
-  transition-duration: 0.5s;
+  box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.1);
+  transition-duration: 0.3s;
+  cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 1px 3px 3px #E53F71;
-    transform: translateY(-3px);
+    transform: scale(1.05);
   }
 
   &-thumb-container {
@@ -103,10 +103,8 @@ mat-form-field {
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
-    // white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    cursor: pointer;
   }
 
   &-platforms {
@@ -116,5 +114,17 @@ mat-form-field {
   &-platform {
     width: 20px;
     margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .wrapper{
+    justify-content: center;
+  }
+  .title {
+    display: none;
+  }
+  .filters {
+    padding: 0;
   }
 }
