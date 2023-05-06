@@ -18,7 +18,7 @@
 
 <section class="games-section">
   <ng-container *ngFor="let game of games">
-    <article class="game" (click)="openGameDetails(game.id)">
+    <article class="game" (click)="openGameDetails(game.id, game.slug)">
       <div class="game-thumb-container">
         <img *ngIf="game.background_image" src="{{game.background_image}}" alt="game-thumbnail" class="game-thumbnail">
         <p *ngIf="!game.background_image">No image to display</p>
@@ -27,7 +27,7 @@
         <p class="game-name">{{game.name}}</p>
         <div class="game-platforms">
           <img *ngFor="let gamePlatform of game.parent_platforms" class="game-platform"
-            src="assets/images/platforms/{{gamePlatform.platform.slug}}.svg" alt="{{gamePlatform.platform.slug}}">
+            src="assets/images/platforms/{{gamePlatform.platform.name}}.svg" alt="{{gamePlatform.platform.slug}}">
         </div>
       </div>
     </article>

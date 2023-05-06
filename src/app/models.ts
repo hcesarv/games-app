@@ -12,6 +12,7 @@ export interface Game {
   publishers: Array<Publishers>;
   ratings: Array<Rating>;
   screenshots: Array<Screenshots>;
+  slug: string;
   trailers: Array<Trailer>;
 }
 

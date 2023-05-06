@@ -12,29 +12,32 @@ import { HttpService } from 'src/app/services/http.service';
 export class DetailsComponent implements OnInit, OnDestroy {
   gameRating = 0;
   gameId: string = '';
+  gameSlug = '';
   game!: Game;
   routeSub!: Subscription;
   gameSub!: Subscription;
+
   constructor(
-    private route: ActivatedRoute,
-    private httpService: HttpService
+    private _route: ActivatedRoute,
+    private _httpService: HttpService
   ) { }
 
   ngOnInit(): void {
-    this.routeSub = this.route.params.subscribe((params: Params) => {
-      this.gameId = params['game-id'];
-      this.getGameDetails(this.gameId);
+    this.routeSub = this._route.params.subscribe((params: Params) => {
+      this.gameId = params['id'];
+      this.gameSlug = params['slug'];
+      this.getGameDetails(this.gameId, this.gameSlug);
     });
   }
 
-  getGameDetails(id: string): void {
-    this.gameSub = this.httpService.getGamesDetails(id).subscribe((response: Game) => {
+  getGameDetails(id: string, slug: string): void {
+    this.gameSub = this._httpService.getGamesDetails(id, slug).subscribe((response: Game) => {
       this.game = response;
 
       setTimeout(() => {
         this.gameRating = this.game.metacritic;
       }, 100);
-    })
+    });
   }
 
   getColor(value: number): string {
