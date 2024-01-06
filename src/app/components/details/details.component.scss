@@ -7,27 +7,27 @@
 .details {
   height: 100vh;
 
-  ::ng-deep mwl-gauge {
-    width: 150px;
-    height: 150px;
-    display: block;
-    padding: 10px;
+  // ::ng-deep mwl-gauge {
+  //   width: 150px;
+  //   height: 150px;
+  //   display: block;
+  //   padding: 10px;
 
-    .dial {
-      stroke-width: 10;
-    }
+  //   .dial {
+  //     stroke-width: 10;
+  //   }
 
-    .value {
-      stroke-dasharray: none;
-      stroke-width: 13;
-    }
+  //   .value {
+  //     stroke-dasharray: none;
+  //     stroke-width: 13;
+  //   }
 
-    .value-text {
-      fill: #fff;
-      font-weight: 700;
-      font-size: 24px;
-    }
-  }
+  //   .value-text {
+  //     fill: #fff;
+  //     font-weight: 700;
+  //     font-size: 24px;
+  //   }
+  // }
 
   .game-gauge {
     position: absolute;
