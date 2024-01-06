@@ -30,7 +30,7 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    GaugeModule.forRoot(),
+    // GaugeModule.forRoot(),
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
